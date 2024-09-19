@@ -8,7 +8,6 @@ const contactRouter = require("../routes/contact-router");
 const adminRouter = require("../routes/admin-router");
 const connect = require("../utils/db");
 const errorMiddleware = require("../middlewares/error-middleware");
-const path = require("path");
 
 const Corsoptions = {
   origin: ["http://localhost:5173"],
@@ -27,12 +26,6 @@ app.get('/', (req, res)=>{
     res.send('Hello');
 });
 
-app.use(express.static(path.resolve(__dirname, "../client", "dist")));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../client", "dist", "index.html"));
-});
-
 const port = 3000;
 
 connect()
@@ -45,5 +38,3 @@ connect()
   .catch((error) => {
     console.log("Error While adding database");
   });
-
-module.exports = app;
