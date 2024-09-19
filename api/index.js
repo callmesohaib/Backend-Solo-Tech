@@ -10,7 +10,7 @@ const connect = require("../utils/db");
 const errorMiddleware = require("../middlewares/error-middleware");
 
 const Corsoptions = {
-  origin: ["http://localhost:5173"],
+  origin: ["https://backend-solo-tech.vercel.app/"],
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
   credentials: true,
 };
@@ -22,9 +22,7 @@ app.use(errorMiddleware);
 app.use("/api/form", contactRouter);
 app.use("/api/data", serviceRouter);
 app.use("/api/admin", adminRouter);
-app.get('/', (req, res)=>{
-    res.send('Hello');
-});
+
 
 const port = 3000;
 
