@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../client", "dist", "index.html"));
 });
 
-const port = 5000;
+const port = 3000;
 
 connect()
   .then(() => {
