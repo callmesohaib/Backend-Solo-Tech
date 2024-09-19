@@ -10,7 +10,7 @@ const connect = require("../utils/db");
 const errorMiddleware = require("../middlewares/error-middleware");
 
 const Corsoptions = {
-  origin: ["https://frontend-solo-tech.vercel.app"],
+  origin: ["https://frontend-solo-tech.vercel.app", "http://localhost:5173"],
   methods: ["GET", "POST", "DELETE", "PUT", "PATCH"],
   credentials: true,
 };
